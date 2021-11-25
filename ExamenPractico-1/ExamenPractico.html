@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExamenPractico</title>
+</head>
+<body>
+    <script>
+        // 1) Colocar las condiciones necesarias para que se cumpla la salida en consola.
+        /*var numero1 = 5;
+        var numero2 = 8;
+        if(numero1<numero2) {
+            console.log("numero1 no es mayor que numero2");
+        }
+        if(numero2>=0) {
+            console.log("numero2 es positivo");
+        }
+        if(numero1<0) {
+            console.log("numero1 es negativo o distinto de cero");
+        }
+        if(numero1++ <= numero2) {
+            console.log("Incrementar en 1 unidad el valor de numero1 no lo hace mayor o igual que numero2");
+        }*/
+
+        // 2) Factorial 
+        /*let n1=0;
+        let factorial=1;
+        for (let i = 1; i <= n1; i++) {
+            factorial=factorial*i;
+        }
+        console.log(factorial);*/
+
+        // 3) Escribir el código de una función a la que se pasa como parámetro un número entero y devuelve como resultado una cadena de texto que indica si el número es par o impar.
+        //    Mostrar por pantalla el resultado devuelto por la función.
+        /*let numero = 1;
+        if (numero%2===0) {
+            console.log("El número es par");
+        }else if(numero%2===1){
+            console.log("El número es impar");
+        }*/
+
+        // 4) Definir si una cadena de texto es palindromo.
+        /*let phrase = "La ruta nos aporto otro paso natural";
+        let arrayRpl1=[];
+        let arrayRpl2=[];       
+        
+        function palindromo(phraseIn) {
+            phraseIn = phraseIn.toLowerCase();
+            phraseIn = phraseIn.split(" ").join("");
+            for (let i = 1; i <= phraseIn.length; i++) {
+                arrayRpl1.push(phraseIn.charAt(phraseIn.length-i));
+            }
+            for (let i = 0; i < phraseIn.length; i++) {
+                arrayRpl2.push(phraseIn.charAt(i));
+            }
+            let flag;
+            for (let i = 0; i < phraseIn.length; i++) {
+                if (arrayRpl1[i] != arrayRpl2[i]){
+                    flag = false;
+                    break;
+                }else{
+                    flag = true;
+                }                
+            }
+            if (flag == true) {
+                console.log("La cadena de texto ES palindromo.")
+            }else{
+                console.log("La cadena de texto NO es palindromo.")
+            }
+        }   
+        
+        palindromo(phrase);*/
+
+        // 5) Definir la siguiente jerarquía de objetos:
+        //5.1
+        class Persona{
+            constructor(nombre = "Nombre", edad = 0) {
+            this.nombre = nombre;
+            this.edad = edad;
+            }
+            obtDetalles() {
+                return "Nombre: "+this.nombre+" - Edad: "+this.edad;
+            }
+        }
+        //5.2
+        class Estudiante extends Persona{
+            constructor(calificacion = 5) {
+                super();
+                this.calificacion = calificacion;            
+            }
+            obtDetalles() {
+                return super.obtDetalles()+" - Calificacion: "+this.calificacion;
+                //return " - Calificacion: "+this.calificacion;
+            }
+        }
+        //5.3
+        class Profesor extends Persona{
+            constructor(asignatura = "JS", nivel = "básico") {
+                super();
+                this.asignatura = asignatura;   
+                this.nivel = nivel;             
+            }
+            obtDetalles() {
+                return super.obtDetalles()+" - Asignatura: "+this.asignatura+" - Nivel: "+this.nivel;
+            }
+        }
+        //5.4
+        class Grupo{
+            constructor(profesor, estudiantes) {
+                this.profesor = profesor;   
+                this.estudiantes = estudiantes;            
+                this.promedio;   
+            }
+
+            calificar(){
+                this.estudiantes.forEach(element => {
+                    element.calificacion = Math.random()*10;
+                });
+                return arrayEstudiantes;
+            }
+
+        }
+        //5.5
+        let arrayEstudiantes = [{nombre: "Juan", edad: 24, calificacion: 0}, {nombre: "Daniela", edad: 19, calificacion: 0}, {nombre: "Tatiana", edad: 28, calificacion: 0}, {nombre: "Milena", edad: 22, calificacion: 0}, {nombre: "Daniel", edad: 28, calificacion: 0}, {nombre: "Fabian", edad: 24, calificacion: 0}]
+        let profesor = {nombre: "Carlos", edad: 38};
+        let grupo = new Grupo(profesor, arrayEstudiantes);
+
+
+        //Pruebas
+        let persona = new Persona("persona", 24);
+        console.log(persona.obtDetalles());
+        let estudiante = new Estudiante(100);
+        console.log(estudiante.obtDetalles());
+        let teacher = new Profesor();
+        console.log(teacher.obtDetalles());
+        console.log(grupo.calificar());
+
+    </script>
+</body>
+</html>
