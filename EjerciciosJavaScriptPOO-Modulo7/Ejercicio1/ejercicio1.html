@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio1</title>
+</head>
+<body>
+    <script>
+
+        let numeroDeElementos=4;
+        let n1=0;
+        let n2=1;
+        let fibonnaci=0;
+        let respuesta='0,1,';        
+        for (let i = 1; i < numeroDeElementos-1; i++) {             
+            fibonnaci=n1+n2;
+            n1=n2;
+            n2=fibonnaci;
+            respuesta+=fibonnaci;
+            if (i<numeroDeElementos-2) {
+                respuesta+=',';
+            }
+        }
+        console.log(respuesta);
+
+    </script>
+</body>
+</html>
