@@ -1,0 +1,163 @@
+:root {
+    --negroVenn: #002b39;
+}
+
+html{
+    font-family: 'Hind', Helvetica, Arial, Lucida, sans-serif;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+p{
+    font-family: 'Hind', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.17;
+    letter-spacing: normal;
+    text-align: center;
+    color: var(--negroVenn);
+    margin-bottom: 0;
+}
+span{
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1489ff;
+    font-weight: 600;
+}
+/*---------------SELECCIÓN PRINCIPAL---------------*/
+
+/*Logo centrado */
+#logoVenn{
+    display: block;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    padding-top: 50px;
+}
+h1,h2{
+    text-align: center;
+    color: var(--negroVenn);
+    font-size: 30px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style:normal ;
+    letter-spacing: normal;
+}
+h5{
+    font-family: 'Hind', sans-serif;
+    font-size: 27px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    text-align: center;
+    color: var(--negroVenn);
+}
+h3{
+    font-family: 'Hind', sans-serif;
+    font-size: 27px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    color: var(--negroVenn);
+}
+
+button{
+    display: block;
+    margin: auto;
+    padding: 15px 45px 11px 46px;
+    object-fit: contain;
+    box-shadow: 0 9px 12px 0 rgb(26 72 100 / 16%);
+    background-image: linear-gradient(to top, #007fff, #00b1ff);
+    color: #FFFFFF;
+    border-width: 0 ;
+    border-radius: 5px;
+    font-size: 18px;
+    background-color: #FFFFFF;
+    margin-bottom: 20px;
+    font-family: 'Hind', Helvetica, Arial, Lucida, sans-serif;
+    font-weight: 600;
+}
+#seccionPrincipal{
+    padding: 40px 0px 50px;
+    margin: 0px;
+    background-image: url("/img/Grupo 9213@2x.webp");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;;
+    width: 100vw;
+    height: 70vh;
+}
+
+/*Tarjetas de presentación*/
+#carrusel{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+#carrusel>img{
+    align-self: center;
+}
+#carrusel>img:first-child{
+    justify-self: end;
+}
+#tarjeta{
+    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 8fr;
+    padding: 40px 29px;
+    width: 634px;
+    height: 185px;
+    border: solid 1px #c3d5e0;
+    border-radius: 25px;
+    background-color: #FFFFFF;
+    margin: auto;
+}
+#tarjeta>img{
+    position: relative;
+    top: -50px;
+    width: 237px;
+    height: 237px;
+    display: inline-block;
+    grid-row: 1 / 4;
+    justify-self: center;
+    align-self: center;
+}
+#tarjeta>h3{
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+    margin: 0;
+
+}
+#tarjeta>h5, #tarjeta>.estrellas{
+    grid-row: 2 / 3;
+    margin: 0px;
+    color: #1489ff;
+    font-size: 18px;
+    justify-self: start;
+}
+#tarjeta>.estrellas>img{
+    margin-right: 8px;
+}
+#tarjeta>p{
+    grid-column: 2 / 4;
+    text-align: start;
+    margin-top: 12.2px;
+}
+
+/*---------------SELECCIÓN SECUNDARIA---------------*/
+
+#seccionSecundaria>h2{
+    margin: 25px 20%;
+    max-width: 548px;
+    font-size: clamp(30px, 3.2vw, 42px);
+}
