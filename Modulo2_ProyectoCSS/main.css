@@ -1,15 +1,18 @@
+*{ 
+    margin: 0;
+    padding: 0;
+}
 :root {
     --negroVenn: #002b39;
 }
-
 html{
     font-family: 'Hind', Helvetica, Arial, Lucida, sans-serif;
 }
-
 body{
     margin: 0px;
     padding: 0px;
-    width: 100%;
+    width: 100vw;
+    overflow-x: hidden;
 }
 p{
     font-family: 'Hind', sans-serif;
@@ -23,6 +26,7 @@ p{
     text-align: center;
     color: var(--negroVenn);
     margin-bottom: 0;
+    margin-top: 10px;
 }
 span{
     display: block;
@@ -31,15 +35,23 @@ span{
     color: #1489ff;
     font-weight: 600;
 }
+
 /*---------------SELECCIÓN PRINCIPAL---------------*/
 
+#seccionPrincipal{
+    padding: 40px 0px 50px;
+    background-image: url("/img/Grupo 9213@2x.webp");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;;
+    width: 100vw;
+    height: 70vh;
+}
 /*Logo centrado */
 #logoVenn{
     display: block;
-    margin: auto;
+    margin: 15px auto;
     width: 100px;
     height: 100px;
-    padding-top: 50px;
 }
 h1,h2{
     text-align: center;
@@ -71,10 +83,10 @@ h3{
     letter-spacing: normal;
     color: var(--negroVenn);
 }
-
 button{
     display: block;
     margin: auto;
+    margin-bottom: 60px;
     padding: 15px 45px 11px 46px;
     object-fit: contain;
     box-shadow: 0 9px 12px 0 rgb(26 72 100 / 16%);
@@ -84,18 +96,8 @@ button{
     border-radius: 5px;
     font-size: 18px;
     background-color: #FFFFFF;
-    margin-bottom: 20px;
     font-family: 'Hind', Helvetica, Arial, Lucida, sans-serif;
     font-weight: 600;
-}
-#seccionPrincipal{
-    padding: 40px 0px 50px;
-    margin: 0px;
-    background-image: url("/img/Grupo 9213@2x.webp");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;;
-    width: 100vw;
-    height: 70vh;
 }
 
 /*Tarjetas de presentación*/
@@ -156,8 +158,63 @@ button{
 
 /*---------------SELECCIÓN SECUNDARIA---------------*/
 
+#seccionSecundaria{
+    padding: 40px 0px 4%;
+    width: 100vw;
+    height: 70vh;
+}
 #seccionSecundaria>h2{
-    margin: 25px 20%;
     max-width: 548px;
     font-size: clamp(30px, 3.2vw, 42px);
+    margin: 20px auto;
+}
+#tarjetas{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0px 50px;
+    width: 80%;
+    margin: 0 auto 40px;
+}
+.tarjetaProductos{
+    display: grid;
+    grid-template-rows: 4fr, 1fr, 1fr;
+    padding: 8px 26px 26px;
+    width: 345px;
+    height: 420px;
+    border: solid 1px #c3d5e0;
+    border-radius: 25px;
+    background-color: #FFFFFF;
+    margin-right: 33px;
+}
+.tarjetaProductos>img{
+    width: 268px;
+    height: 261px;
+    justify-self: center;
+}
+.tarjetaProductos>h5{
+    font-size: 27px;
+    margin: 0;
+}
+.tarjetaProductos>p{
+    font-size: 18px;
+    margin: 0;
+    text-align: center;
+}
+#seccionSecundaria>button{
+    margin-bottom: 27px;
+}
+
+/*---------------SELECCIÓN TRES---------------*/
+
+#seccionTres{
+    display: none;
+}
+
+/*---------------SELECCIÓN CUATRO---------------*/
+
+#seccionCuatro{
+    display: none;
+}
+footer{
+    display: none;
 }
