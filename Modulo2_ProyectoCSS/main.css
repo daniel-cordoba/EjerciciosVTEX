@@ -232,6 +232,15 @@ button{
     margin-left: auto;
     max-width: 862px;
 }
+#lineaOpciones{
+    position: absolute;
+    top: 40%;
+    right: 10%;
+    z-index: -1;
+    width: 40vw;
+    max-width: 640px;
+    min-width: 620px;
+}
 .opcion{
     display: grid;
     grid-template-rows: 27px 1fr 25px;
