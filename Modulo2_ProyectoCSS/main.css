@@ -304,5 +304,38 @@ button{
 /*---------------SELECCIÓN FOOTER---------------*/
 
 footer{
-    display: none;
+    padding: 40px 140px;
+    background-image: linear-gradient(90deg,#1489ff 0%,#0073e6 100%);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+#logoRedesFooter{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: solid 1px white;
+    padding-bottom: 15px;
+}
+#redesFooter{
+    justify-self: end;
+    align-self: center;
+}
+#redesFooter>img{
+    padding-left: 25px;
+}
+#politicasFooter{
+    display: grid;
+    grid-template-columns: 50% 20% 20% 10%;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+#politicasFooter>span{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    text-align: end;
+}
+#politicasFooter>span:nth-child(1){
+    grid-column: 2/3;
 }
