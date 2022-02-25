@@ -29,13 +29,6 @@ p{
     margin-bottom: 0;
     margin-top: 10px;
 }
-span{
-    display: block;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #1489ff;
-    font-weight: 600;
-}
 
 /*---------------SELECCIÓN PRINCIPAL---------------*/
 
@@ -46,6 +39,13 @@ span{
     background-size: 100% 100%;;
     width: 100vw;
     height: 70vh;
+}
+#seccionPrincipal>span{
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1489ff;
+    font-weight: 600;
 }
 /*Logo centrado */
 #logoVenn{
@@ -216,6 +216,7 @@ button{
 #seccionTres{
     width: 100vw;
     height: 40vh;
+    margin-bottom: 80px;
 }
 #seccionTres>h2{
     display: block;
@@ -256,8 +257,52 @@ button{
 /*---------------SELECCIÓN CUATRO---------------*/
 
 #seccionCuatro{
-    display: none;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 90px;
+    padding-top: 150px;
+    background-image: url("img/Enmascarar grupo 259@2x.webp");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;;
 }
+#seccionCuatro>h2{
+    font-size: clamp(30px,3.1vw,42px);
+}
+#seccionCuatro>button{
+    margin-top: 80px;
+}
+.tarjetaCaracteristica{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding: 22px 5%;
+    margin: 15px 6%;
+    justify-items: center;
+    align-items: center;
+    border: solid 1px #c3d5e0;
+    box-shadow: 0 9px 12px 0 rgb(26 72 100 / 16%);
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom, #fff, #fff 78%, #f0feff);
+}
+.tarjetaCaracteristica>span{
+    display: block;
+    text-align: center;
+    font-family: 'Hind';
+    font-size: 16px;
+}
+#contenedorTarjetas{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    margin-top: 35px;
+    margin-bottom: clamp(108px, 10vw, 146px);
+    width: 70vw;
+    max-width: 950px;
+    max-height: 644px;
+    
+}
+
+/*---------------SELECCIÓN FOOTER---------------*/
+
 footer{
     display: none;
 }
