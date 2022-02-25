@@ -7,6 +7,7 @@
 }
 html{
     font-family: 'Hind', Helvetica, Arial, Lucida, sans-serif;
+    font-size: 16px;
 }
 body{
     margin: 0px;
@@ -119,8 +120,9 @@ button{
     padding: 40px 29px;
     width: 634px;
     height: 185px;
-    border: solid 1px #c3d5e0;
-    border-radius: 25px;
+    border: solid 1px #c3d5e0 80%;
+    box-shadow: 0 9px 12px 0 rgb(26 72 100 / 16%);
+    border-radius: 10px;
     background-color: #FFFFFF;
     margin: auto;
 }
@@ -176,15 +178,20 @@ button{
     margin: 0 auto 40px;
 }
 .tarjetaProductos{
+    justify-self: center;
     display: grid;
     grid-template-rows: 4fr, 1fr, 1fr;
     padding: 8px 26px 26px;
-    width: 345px;
-    height: 420px;
-    border: solid 1px #c3d5e0;
-    border-radius: 25px;
+    padding: clamp(26px,2vw,4rem);
+    padding-top: 0.5rem;
+    width: 275px;
+    height: 390px;
+    /* border: solid 1px #c3d5e0; */
+    border: solid 1px transparent;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px 0 rgba(195,213,224,0.5);
+    /* box-shadow: 0 9px 12px 0 rgb(26 72 100 / 16%); */
     background-color: #FFFFFF;
-    margin-right: 33px;
 }
 .tarjetaProductos>img{
     width: 268px;
@@ -207,8 +214,44 @@ button{
 /*---------------SELECCIÓN TRES---------------*/
 
 #seccionTres{
-    display: none;
+    width: 100vw;
+    height: 40vh;
 }
+#seccionTres>h2{
+    display: block;
+}
+#contenedorOpciones{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: relative;
+    top: 8vh;
+    margin-top: -3.7vw;
+    margin-right: auto;
+    margin-bottom: -4.5vw;
+    margin-left: auto;
+    max-width: 862px;
+}
+.opcion{
+    display: grid;
+    grid-template-rows: 27px 1fr 25px;
+    justify-content: center;
+}
+.numeros{
+    justify-self: center;
+}
+.circulos{
+    width: 200px;
+    height: 200px;
+}
+.opcion>p{
+    margin: 0;
+    font-size: 22px;
+}
+#seccionTres>button{
+    position: relative;
+    top: 18vh;
+}
+
 
 /*---------------SELECCIÓN CUATRO---------------*/
 
