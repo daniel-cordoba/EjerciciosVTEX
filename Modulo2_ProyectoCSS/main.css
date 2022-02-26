@@ -38,7 +38,7 @@ p{
     background-repeat: no-repeat;
     background-size: 100% 100%;;
     width: 100vw;
-    height: 70vh;
+    min-height: 70vh;
 }
 #seccionPrincipal>span{
     display: block;
@@ -349,7 +349,48 @@ footer{
     grid-column: 2/3;
 }
 
-/*---------------MEDIA QUERY---------------*/
-@media (min-width: 320px) and (max-width: 768px){
-    
+/*-------------------------MEDIA QUERY-------------------------*/
+@media (max-width: 1200px){
+    /*---------------SELECCIÓN PRINCIPAL---------------*/
+    #seccionPrincipal{
+        padding-bottom: 10%;
+    }
+    #logoVenn{
+        margin: 0 auto;
+        width: 66px;
+        height: 70px;
+    }
+
+    /*---------------SELECCIÓN SECUNDARIA---------------*/
+    #tarjetas{
+        grid: inherit;
+    }
+    .tarjetaProductos{
+        padding: 0;
+        width: 40%;
+        min-width: 350px;
+    }
+    #tarjetas>.tarjetaProductos:nth-child(2){
+        display: none;
+    }
+    #tarjetas>.tarjetaProductos:nth-child(3){
+        display: none;
+    }
+    .tarjetaProductos>img{
+        width: 300px;
+        height: 280px;
+    }
+    .tarjetaProductos>h5{
+        font-size: 22px;
+        align-self: center;
+    }
+    .tarjetaProductos>p{
+        font-size: 14px;
+        max-width: 80%;
+        justify-self: center;
+    }
 }
+
+/* @media (max-width: 900px){
+
+} */
