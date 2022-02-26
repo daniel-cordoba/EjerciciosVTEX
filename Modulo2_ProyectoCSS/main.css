@@ -163,7 +163,7 @@ button{
 #seccionSecundaria{
     padding: 40px 0px 4%;
     width: 100vw;
-    height: 70vh;
+    min-height: 70vh;
 }
 #seccionSecundaria>h2{
     max-width: 548px;
@@ -215,7 +215,7 @@ button{
 
 #seccionTres{
     width: 100vw;
-    height: 40vh;
+    min-height: 40vh;
     margin-bottom: 80px;
 }
 #seccionTres>h2{
@@ -267,7 +267,7 @@ button{
 
 #seccionCuatro{
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     margin-top: 90px;
     padding-top: 150px;
     background-image: url("img/Enmascarar grupo 259@2x.webp");
@@ -347,4 +347,9 @@ footer{
 }
 #politicasFooter>span:nth-child(1){
     grid-column: 2/3;
+}
+
+/*---------------MEDIA QUERY---------------*/
+@media (min-width: 320px) and (max-width: 768px){
+    
 }
