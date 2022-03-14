@@ -422,4 +422,48 @@ footer{
     #tarjeta>p{
         margin-top: 0px;
     }
+    /*---------------SELECCIÓN TRES---------------*/
+    #lineaOpciones{
+        display:none;
+    }
+    .opcion{
+        display: none;
+    }
+    .opcion > p{
+        align-self: start;
+    }
+    .numeros{
+        display: none;
+    }
+    .circulos{
+        width: 150px;
+        height: 150px;
+    }
+    #contenedorOpciones{
+        display: inherit;
+    }
+    #contenedorOpciones > :nth-child(2){
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        justify-items: center;
+        align-items: center;
+        padding: 2rem 1rem 0 1rem;
+        margin: 0 auto;
+        margin-bottom: 2.5rem;
+        max-width: 202px;
+        max-height: 196px;
+        width: 100%;
+        border: solid 1px #c3d5e0;
+        box-shadow: 0 9px 12px 0 rgb(26 72 100 / 16%);
+        border-radius: 10px;
+
+    }
+    #seccionTres > button{
+        top: 12vh;
+    }
+    /*---------------SELECCIÓN CUATRO---------------*/
+    
+    #contenedorTarjetas{
+        grid-template-columns: 1fr 1fr;
+    } 
 }
