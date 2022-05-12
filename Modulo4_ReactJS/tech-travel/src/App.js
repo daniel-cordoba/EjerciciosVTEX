@@ -1,4 +1,4 @@
-import { ListOption } from "./components";
+import { Timer } from "./components";
 
 function App() {
   const days = [
@@ -9,11 +9,7 @@ function App() {
   ];
 
   return (
-    <ul>
-      {days.map(day => 
-          <ListOption key={day.id}>{day.nombre}</ListOption>
-        )}
-    </ul>
+    <Timer/>
   );
 }
 
