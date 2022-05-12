@@ -1,27 +1,19 @@
 import { ListOption } from "./components";
 
-const List = () => {
-  return(
-    <ul>
-      <ListOption>Lunes</ListOption>
-      <ListOption>Martes</ListOption>
-      <ListOption>Miercoles</ListOption>
-    </ul>
-)};
-
-const ErrorMessage = () =>{
-  return(
-    <p>No hay lista</p>
-  )
-};
-
 function App() {
-  const isList = false;
+  const days = [
+    {id: 1, nombre:"Lunes"},
+    {id: 2, nombre:"Martes"},
+    {id: 3, nombre:"Miercoles"},
+    {id: 4, nombre:"Jueves"}
+  ];
 
   return (
-    <>
-      { isList ? <List/> : <ErrorMessage/> }
-    </>
+    <ul>
+      {days.map(day => 
+          <ListOption key={day.id}>{day.nombre}</ListOption>
+        )}
+    </ul>
   );
 }
 
