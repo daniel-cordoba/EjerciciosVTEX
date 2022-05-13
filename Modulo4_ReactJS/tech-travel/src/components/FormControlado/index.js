@@ -1,23 +1,18 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
 
 const FormControlado = () => {
-    const [ value, setValue ] = useState("");
+    const inputRef = useRef();
 
-    const onChange = (event) => {
-        setValue(event.currentTarget.value);
-    }
-
-    const onSubmit = (event) => {
-        event.preventDefault();
-        console.log(value);
+    const onClickButton = () => {
+        console.log(inputRef.current.value);
     }
 
     return(
-        <form onSubmit={onSubmit}>
+        <div>
             <h1>Mi input</h1>
-            <input value={value} onChange={onChange}/>
-            <button type="submit">Continuar</button>
-        </form>
+            <input ref={inputRef}/>
+            <button onClick={onClickButton}>Continuar</button>
+        </div>
     )
 }
 
