@@ -1,8 +1,8 @@
-import { CounterFunction } from "./components";
+import { FormControlado } from "./components";
 
 function App() {
   return (
-    <CounterFunction/>
+    <FormControlado/>
   );
 }
 
