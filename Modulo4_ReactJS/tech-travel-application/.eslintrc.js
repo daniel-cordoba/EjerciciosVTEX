@@ -28,6 +28,6 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'react/props-types': 'off',
     'react/jsx-no-bind': 'off',
-    'prettier/prettier': 'error',
+    'prettier/prettier': ['error', { endOfLine: 'auto' }],
   },
 };
