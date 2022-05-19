@@ -26,8 +26,9 @@ module.exports = {
     camelcase: 'off',
     'no-console': 'off',
     'react/jsx-props-no-spreading': 'off',
-    'react/props-types': 'off',
+    'react/prop-types': 'off',
     'react/jsx-no-bind': 'off',
     'prettier/prettier': ['error', { endOfLine: 'auto' }],
+    'react/jsx-no-constructed-context-values': 'off',
   },
 };
