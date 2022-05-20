@@ -1,3 +1,6 @@
+# Descripción del proyecto
+Proyecto del final del curso de Frontend de Tech Academy donde se propone realizar un portal para compras de viajes con su respectivo carrito de compras haciendo uso de React.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

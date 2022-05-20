@@ -37,14 +37,7 @@ function Cart() {
         ))}
         <Total>
           <p>TOTAL</p>
-          <div>
-            {/* {state.cart.map((el) => (
-              <Subtotal>
-                <p>{el.price + total}</p>
-              </Subtotal>
-            ))} */}
-            {total}
-          </div>
+          <div>{total}</div>
         </Total>
       </ContainerList>
     </Container>
