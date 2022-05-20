@@ -8,11 +8,14 @@ import {
   Info,
   Quantity,
   Subtotal,
+  Total,
 } from './styles';
 
 function Cart() {
   const { state, setState } = useContext(CartContext);
-
+  const total = state.cart
+    .map((el) => el.price * el.quantity)
+    .reduce((acc, price) => acc + price, 0);
   return (
     <Container>
       <ContainerList>
@@ -32,6 +35,17 @@ function Cart() {
             </Subtotal>
           </TravelItem>
         ))}
+        <Total>
+          <p>TOTAL</p>
+          <div>
+            {/* {state.cart.map((el) => (
+              <Subtotal>
+                <p>{el.price + total}</p>
+              </Subtotal>
+            ))} */}
+            {total}
+          </div>
+        </Total>
       </ContainerList>
     </Container>
   );
