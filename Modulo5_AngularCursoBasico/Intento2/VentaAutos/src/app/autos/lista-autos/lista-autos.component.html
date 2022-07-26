@@ -16,7 +16,7 @@
         <div class="row">
             <div>
                 <div class="col-md-6">
-                    <h3>Filtrar por:</h3>
+                    <h3>Filtrar por: {{ filtro }}</h3>
                 </div>
             </div>
         </div>
@@ -26,7 +26,7 @@
             <tr>
                 <th>
                     <button class="btn btn-primary"
-                            (click)="muestraImagenes()">{{ muestraImagen ? 'Mostrar Imagenes' : 'Ocultar Imagenes' }}</button>
+                            (click)="muestraImagenes()">{{ muestraImagen ? 'Ocultar Imagenes' : 'Mostrar Imagenes' }}</button>
                 </th>
                 <th>Marca</th>
                 <th>Modelo</th>
@@ -40,7 +40,7 @@
         <tbody>
             <tr *ngFor="let auto of listaAutos">
                 <td>
-                    <img [src]="auto.imagenUrl" 
+                    <img [src]="auto.imageUrl" 
                         [style.width.px]="imageWidth"
                         alt="Imagen auto" 
                         *ngIf="muestraImagen">
@@ -49,8 +49,8 @@
                 <td>{{ auto.modelo }}</td>
                 <td>{{ auto.anio }}</td>
                 <td>{{ auto.color }}</td>
-                <td>{{ auto.kilometros }}</td>
-                <td>{{ auto.precio }}</td>
+                <td>{{ auto.kilometros | number }}</td>
+                <td>{{ auto.precio | currency }}</td>
                 <td>{{ auto.calificacion }}</td>
             </tr>
         </tbody>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Auto } from "src/app/datos/auto";
 
 @Component({
     selector: "lista-autos",
@@ -18,7 +19,7 @@ export class ListaAutosComponent implements OnInit {
         this.listaAutos = [
             {
                 id: 1,
-                imagenUrl: "../../assets/KiaCerato.jpeg",
+                imageUrl: "../../assets/KiaCerato.jpeg",
                 marca: "Kia",
                 modelo: "Cerato Vivro",
                 anio: 2022,
@@ -29,7 +30,7 @@ export class ListaAutosComponent implements OnInit {
             },
             {
                 id: 2,
-                imagenUrl: "../../assets/Mazda3.jpg",
+                imageUrl: "../../assets/Mazda3.jpg",
                 marca: "Mazda",
                 modelo: "3 Touring",
                 anio: 2021,
@@ -40,7 +41,7 @@ export class ListaAutosComponent implements OnInit {
             },
             {
                 id: 3,
-                imagenUrl: "../../assets/NissanSentra.jpg",
+                imageUrl: "../../assets/NissanSentra.jpg",
                 marca: "Nissan",
                 modelo: "Sentra SR",
                 anio: 2022,
@@ -51,7 +52,7 @@ export class ListaAutosComponent implements OnInit {
             },
             {
                 id: 4,
-                imagenUrl: "../../assets/ToyotaCorolla.jpg",
+                imageUrl: "../../assets/ToyotaCorolla.jpg",
                 marca: "Toyota",
                 modelo: "Corolla Seg",
                 anio: 2020,
@@ -62,7 +63,7 @@ export class ListaAutosComponent implements OnInit {
             },
             {
                 id: 5,
-                imagenUrl: "../../assets/VolkswagenJetta.jpg",
+                imageUrl: "../../assets/VolkswagenJetta.jpg",
                 marca: "Volkswagen",
                 modelo: "Jetta Highline",
                 anio: 2022,
