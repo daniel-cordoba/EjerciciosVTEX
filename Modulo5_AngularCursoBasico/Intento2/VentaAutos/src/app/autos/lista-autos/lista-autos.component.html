@@ -21,25 +21,38 @@
             </div>
         </div>
     </div>
-    <div class="table-responsive" *ngIf="arregloAutos.length>0">
-        <div class="tabla">
-            <thead>
-                <tr>
-                    <th>
-                        <button class="btn btn-primary">Imágenes</button>
-                    </th>
-                    <th>Marca</th>
-                    <th>Modelo</th>
-                    <th>Año</th>
-                    <th>Color</th>
-                    <th>Kilómetros</th>
-                    <th>Precio</th>
-                    <th>Calificación</th>
-                </tr>
-            </thead>
-            <tbody>
-                Cuerpo tabla
-            </tbody>
-        </div>
-    </div>
+    <table class="table" *ngIf="listaAutos.length>0">
+        <thead>
+            <tr>
+                <th>
+                    <button class="btn btn-primary"
+                            (click)="muestraImagenes()">{{ muestraImagen ? 'Mostrar Imagenes' : 'Ocultar Imagenes' }}</button>
+                </th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Año</th>
+                <th>Color</th>
+                <th>Kilómetros</th>
+                <th>Precio</th>
+                <th>Calificación</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let auto of listaAutos">
+                <td>
+                    <img [src]="auto.imagenUrl" 
+                        [style.width.px]="imageWidth"
+                        alt="Imagen auto" 
+                        *ngIf="muestraImagen">
+                </td>
+                <td>{{ auto.marca }}</td>
+                <td>{{ auto.modelo }}</td>
+                <td>{{ auto.anio }}</td>
+                <td>{{ auto.color }}</td>
+                <td>{{ auto.kilometros }}</td>
+                <td>{{ auto.precio }}</td>
+                <td>{{ auto.calificacion }}</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
