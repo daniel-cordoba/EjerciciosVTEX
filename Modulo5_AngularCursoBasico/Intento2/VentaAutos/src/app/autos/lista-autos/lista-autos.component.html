@@ -1,0 +1,45 @@
+<div class="card">
+    <div class="card-header">
+        <h1>
+            {{ tituloListaAutos }}
+        </h1>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-12">
+                <label for="">Filtrar por</label>
+            </div>
+            <div class="col-md-4">
+                <input type="text">
+            </div>
+        </div>
+        <div class="row">
+            <div>
+                <div class="col-md-6">
+                    <h3>Filtrar por:</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="table-responsive" *ngIf="arregloAutos.length>0">
+        <div class="tabla">
+            <thead>
+                <tr>
+                    <th>
+                        <button class="btn btn-primary">Imágenes</button>
+                    </th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Año</th>
+                    <th>Color</th>
+                    <th>Kilómetros</th>
+                    <th>Precio</th>
+                    <th>Calificación</th>
+                </tr>
+            </thead>
+            <tbody>
+                Cuerpo tabla
+            </tbody>
+        </div>
+    </div>
+</div>
