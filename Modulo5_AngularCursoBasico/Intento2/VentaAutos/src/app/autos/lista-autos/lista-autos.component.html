@@ -10,7 +10,7 @@
                 <label for="">Filtrar por</label>
             </div>
             <div class="col-md-4">
-                <input type="text">
+                <input type="text" [(ngModel)]="filtro">
             </div>
         </div>
         <div class="row">
@@ -38,7 +38,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let auto of listaAutos">
+            <tr *ngFor="let auto of listaAutosFiltrados">
                 <td>
                     <img [src]="auto.imageUrl" 
                         [style.width.px]="imageWidth"
@@ -51,7 +51,13 @@
                 <td>{{ auto.color }}</td>
                 <td>{{ auto.kilometros | number }}</td>
                 <td>{{ auto.precio | currency }}</td>
-                <td>{{ auto.calificacion }}</td>
+                <td>
+                    <estrellas 
+                        [calificacion] = "auto.calificacion"
+                        (starsClick)="onClickCalificacion($event)">
+
+                    </estrellas>
+                </td>
             </tr>
         </tbody>
     </table>

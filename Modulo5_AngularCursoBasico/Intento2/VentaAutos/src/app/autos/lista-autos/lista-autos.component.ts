@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { Auto } from "src/app/datos/auto";
 
 @Component({
@@ -8,12 +9,33 @@ import { Auto } from "src/app/datos/auto";
 })
 
 export class ListaAutosComponent implements OnInit {
+    faStar = faStar;
+
+    starList = [];
     tituloListaAutos: string = "Lista de Automóviles";
     listaAutos: Auto[] = [];
-    filtro: string = 'default';
+    listaAutosFiltrados: Auto[] = [];
     imageWidth = 200;
     imageMargin = 2;
     muestraImagen: boolean = false;
+
+    private _filtro: string = "";
+
+    get filtro(): string {
+        return this._filtro;
+    }
+
+    set filtro( filtro: string ) {
+        this._filtro = filtro;
+        this.filtraAutos( filtro );
+    }
+
+    filtraAutos( filtrarPor: string): void {
+        filtrarPor = filtrarPor.toLocaleLowerCase();
+        this.listaAutosFiltrados = this.listaAutos.filter(
+            ( auto: Auto ) => auto.marca.toLocaleLowerCase().includes( filtrarPor )
+        )
+    }
 
     ngOnInit(): void {
         this.listaAutos = [
@@ -77,5 +99,9 @@ export class ListaAutosComponent implements OnInit {
 
     muestraImagenes(): void {
         this.muestraImagen = !this.muestraImagen;
+    }
+
+    onClickCalificacion ( mensaje: string ): void {
+        alert( "Dieron click en la calificacion: " + mensaje ); 
     }
 }
