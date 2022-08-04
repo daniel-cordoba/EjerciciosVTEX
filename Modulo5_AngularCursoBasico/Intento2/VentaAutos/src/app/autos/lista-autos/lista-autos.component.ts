@@ -30,7 +30,7 @@ export class ListaAutosComponent implements OnInit {
         this.filtraAutos( filtro );
     }
 
-    filtraAutos( filtrarPor: string): void {
+    filtraAutos( filtrarPor: string ): void {
         filtrarPor = filtrarPor.toLocaleLowerCase();
         this.listaAutosFiltrados = this.listaAutos.filter(
             ( auto: Auto ) => auto.marca.toLocaleLowerCase().includes( filtrarPor )
@@ -47,7 +47,7 @@ export class ListaAutosComponent implements OnInit {
                 anio: 2022,
                 color: "Gris Oscuro",
                 kilometros: 9500,
-                calificacion: 4.2,
+                calificacion: 3,
                 precio: 90000000,
             },
             {
@@ -69,7 +69,7 @@ export class ListaAutosComponent implements OnInit {
                 anio: 2022,
                 color: "Naranja Bi-tono",
                 kilometros: 12000,
-                calificacion: 4.4,
+                calificacion: 4,
                 precio: 110000000,
             },
             {
@@ -80,7 +80,7 @@ export class ListaAutosComponent implements OnInit {
                 anio: 2020,
                 color: "Azul Oscuro",
                 kilometros: 21500,
-                calificacion: 4.7,
+                calificacion: 5,
                 precio: 105000000,
             },
             {
@@ -91,10 +91,11 @@ export class ListaAutosComponent implements OnInit {
                 anio: 2022,
                 color: "Rojo",
                 kilometros: 4000,
-                calificacion: 4.9,
+                calificacion: 3,
                 precio: 108000000,
             }
         ];
+        this.listaAutosFiltrados = this.listaAutos;
     }
 
     muestraImagenes(): void {

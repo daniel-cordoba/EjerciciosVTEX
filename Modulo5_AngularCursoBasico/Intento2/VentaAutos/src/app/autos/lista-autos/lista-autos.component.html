@@ -39,19 +39,19 @@
         </thead>
         <tbody>
             <tr *ngFor="let auto of listaAutosFiltrados">
-                <td>
+                <td class="align-middle">
                     <img [src]="auto.imageUrl" 
                         [style.width.px]="imageWidth"
                         alt="Imagen auto" 
                         *ngIf="muestraImagen">
                 </td>
-                <td>{{ auto.marca }}</td>
-                <td>{{ auto.modelo }}</td>
-                <td>{{ auto.anio }}</td>
-                <td>{{ auto.color }}</td>
-                <td>{{ auto.kilometros | number }}</td>
-                <td>{{ auto.precio | currency }}</td>
-                <td>
+                <td class="align-middle">{{ auto.marca }}</td>
+                <td class="align-middle">{{ auto.modelo }}</td>
+                <td class="align-middle">{{ auto.anio }}</td>
+                <td class="align-middle">{{ auto.color }}</td>
+                <td class="align-middle">{{ auto.kilometros | number }}</td>
+                <td class="align-middle">{{ auto.precio | currency }}</td>
+                <td class="align-middle">
                     <estrellas 
                         [calificacion] = "auto.calificacion"
                         (starsClick)="onClickCalificacion($event)">
