@@ -1,5 +1,99 @@
 <div class="card">
     <div class="card-header">
-        {{ tituloPagina }}
+        <h3>{{tituloPagina + ': ' + auto?.marca + ' ' + auto?.modelo}}</h3>
+    </div>
+    
+    <div class = 'container-fluid'>
+        <div class="row">
+
+            <div class="col-6 container">
+                <div class="row" style="margin-top: 7em">
+                    <div class="col">
+                        <label>Marca:</label>
+                    </div>
+                    <div class="col">
+                        {{auto?.marca}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label>Modelo:</label>
+                    </div>
+                    <div class="col">
+                        {{auto?.modelo}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label>Año:</label>
+                    </div>
+                    <div class="col">
+                        {{auto?.anio}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label>Color:</label>
+                    </div>
+                    <div class="col">
+                        {{auto?.color}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label>Kilómetros:</label>
+                    </div>
+                    <div class="col">
+                        {{auto?.kilometros | number}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label>Precio:</label>
+                    </div>
+                    <div class="col">
+                        {{auto?.precio | currency}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label>Calificación:</label>
+                    </div>
+                    <div class="col">                        
+                        <estrellas
+                                    [calificacion]="auto.calificacion!">
+                        </estrellas>
+                    </div>
+                </div>
+                <button class='btn btn-outline-primary' style="width:10em;float: right;" (click)="onComprar()">Comprar
+                </button>
+            </div>
+
+            <div class="col-6 container">
+                <div id="carouselAutos" class="carousel slide" data-bs-ride="carousel"
+                     style="margin-top: 2em;margin-bottom: 2em; width: 35em">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            {{auto.imageUrl}}
+                          <img [src]="auto.imageUrl" class="d-block w-100" alt="...">
+                        </div>
+                      <div class="carousel-item">
+                         lobo
+                        <img src="assets/imagenes/lobo.jpg" class="d-block w-100" alt="assets/imagenes/visio.jpg">
+                      </div>
+                      <div class="carousel-item">
+                        cobra
+                        <img src="assets/imagenes/cobra.jpg" class="d-block w-100" alt="assets/imagenes/cobra.jpg">
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-footer">
+        <button class='btn btn-outline-secondary' style="width:110px" (click)="onBack()">
+            Regreso
+        </button>
     </div>
 </div>

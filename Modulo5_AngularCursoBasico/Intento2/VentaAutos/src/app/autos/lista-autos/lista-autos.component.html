@@ -46,7 +46,7 @@
                         *ngIf="muestraImagen">
                 </td>
                 <td class="align-middle">{{ auto.marca }}</td>
-                <td class="align-middle">{{ auto.modelo }}</td>
+                <td class="align-middle"><a [routerLink]="['/auto', auto.id]">{{ auto.modelo }}</a></td>
                 <td class="align-middle">{{ auto.anio }}</td>
                 <td class="align-middle">{{ auto.color }}</td>
                 <td class="align-middle">{{ auto.kilometros | number }}</td>

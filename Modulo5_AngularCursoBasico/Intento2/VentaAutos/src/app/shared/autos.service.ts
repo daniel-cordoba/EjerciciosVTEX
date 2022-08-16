@@ -5,13 +5,22 @@ import { Auto } from "../datos/auto";
     providedIn: "root"
 })
 
-export class AutosService{
+export class AutosService{    
+    listaAutos: Auto[] = [];
 
-    obtenListaAutos(): Auto[] {
-        let listaAutos = this._determinaListaAutos();
-        return listaAutos;
+    public obtenListaAutos(): Auto[] {
+        if( this.listaAutos.length == 0 ) {
+            this.listaAutos = this._determinaListaAutos();
+        }
+        return this.listaAutos;
     }
 
+    public obtenAuto( id: number ): Auto {
+        if( this.listaAutos.length == 0 ) {
+          this.listaAutos = this._determinaListaAutos();
+        }        
+        return this.listaAutos.find( auto => auto.id == id )!;
+      }
 
     private _determinaListaAutos(): Auto[] {
         let listaAutos = [
