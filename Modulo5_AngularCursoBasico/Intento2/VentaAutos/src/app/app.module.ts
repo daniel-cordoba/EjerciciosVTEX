@@ -5,12 +5,14 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppComponent } from './app.component';
 import { ListaAutosComponent } from './autos/lista-autos/lista-autos.component';
 import { EstrellasComponent } from './shared/estrellas/estrellas.component';
+import { DetalleAutosComponent } from './autos/detalle-autos/detalle-autos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaAutosComponent,
-    EstrellasComponent
+    EstrellasComponent,
+    DetalleAutosComponent
   ],
   imports: [
     BrowserModule,
