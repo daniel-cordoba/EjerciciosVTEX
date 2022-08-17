@@ -8,6 +8,7 @@ import { EstrellasComponent } from './shared/estrellas/estrellas.component';
 import { DetalleAutosComponent } from './autos/detalle-autos/detalle-autos.component';
 import { InicioComponent } from './autos/inicio/inicio.component';
 import { RouterModule } from '@angular/router';
+import { ClientesComponent } from './clientes/clientes.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { RouterModule } from '@angular/router';
     ListaAutosComponent,
     EstrellasComponent,
     DetalleAutosComponent,
-    InicioComponent
+    InicioComponent,
+    ClientesComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +27,7 @@ import { RouterModule } from '@angular/router';
       { path: "autos", component: ListaAutosComponent },
       { path: "auto/:id", component: DetalleAutosComponent },
       { path: "inicio", component: InicioComponent},
+      { path: "clientes", component: ClientesComponent },
       { path: "", redirectTo: "inicio", pathMatch: "full" },
       { path: "**", redirectTo: "inicio", pathMatch: "full" }
     ]),

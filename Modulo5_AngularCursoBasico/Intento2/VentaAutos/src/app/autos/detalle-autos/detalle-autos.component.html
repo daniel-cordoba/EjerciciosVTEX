@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-header">
-        <h3>{{tituloPagina + ': ' + auto?.marca + ' ' + auto?.modelo}}</h3>
+        <h3>{{tituloPagina + ': ' + auto.marca + ' ' + auto.modelo}}</h3>
     </div>
     
     <div class = 'container-fluid'>
@@ -12,7 +12,7 @@
                         <label>Marca:</label>
                     </div>
                     <div class="col">
-                        {{auto?.marca}}
+                        {{auto.marca}}
                     </div>
                 </div>
                 <div class="row">
@@ -20,7 +20,7 @@
                         <label>Modelo:</label>
                     </div>
                     <div class="col">
-                        {{auto?.modelo}}
+                        {{auto.modelo}}
                     </div>
                 </div>
                 <div class="row">
@@ -28,7 +28,7 @@
                         <label>Año:</label>
                     </div>
                     <div class="col">
-                        {{auto?.anio}}
+                        {{auto.anio}}
                     </div>
                 </div>
                 <div class="row">
@@ -36,7 +36,7 @@
                         <label>Color:</label>
                     </div>
                     <div class="col">
-                        {{auto?.color}}
+                        {{auto.color}}
                     </div>
                 </div>
                 <div class="row">
@@ -44,7 +44,7 @@
                         <label>Kilómetros:</label>
                     </div>
                     <div class="col">
-                        {{auto?.kilometros | number}}
+                        {{auto.kilometros | number}}
                     </div>
                 </div>
                 <div class="row">
@@ -52,7 +52,7 @@
                         <label>Precio:</label>
                     </div>
                     <div class="col">
-                        {{auto?.precio | currency}}
+                        {{auto.precio | currency}}
                     </div>
                 </div>
                 <div class="row">
@@ -65,28 +65,14 @@
                         </estrellas>
                     </div>
                 </div>
-                <button class='btn btn-outline-primary' style="width:10em;float: right;" (click)="onComprar()">Comprar
+                <button class='btn btn-outline-primary my-3' style="width:10em;float: right;" (click)="onComprar()">Comprar
                 </button>
             </div>
 
-            <div class="col-6 container">
-                <div id="carouselAutos" class="carousel slide" data-bs-ride="carousel"
-                     style="margin-top: 2em;margin-bottom: 2em; width: 35em">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            {{auto.imageUrl}}
-                          <img [src]="auto.imageUrl" class="d-block w-100" alt="...">
-                        </div>
-                      <div class="carousel-item">
-                         lobo
-                        <img src="assets/imagenes/lobo.jpg" class="d-block w-100" alt="assets/imagenes/visio.jpg">
-                      </div>
-                      <div class="carousel-item">
-                        cobra
-                        <img src="assets/imagenes/cobra.jpg" class="d-block w-100" alt="assets/imagenes/cobra.jpg">
-                      </div>
-                    </div>
-                  </div>
+            <div class="col-6 container">                
+                <div class="position-relative top-50 start-50 translate-middle">
+                    <img [src]="auto.imageUrl" class="d-block w-100" alt="...">
+                </div>
             </div>
         </div>
     </div>
